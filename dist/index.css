@@ -1,0 +1,153 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('images/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header {
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   flex-direction: column;
+   padding: 2rem;
+   background-color: rgba(0, 0, 0, 0.9);
+   color: white;
+}
+
+.header h1 {
+    margin-bottom: 1rem;
+    font-size: 5rem;
+}
+
+@media (min-width: 700px) {
+    .header h1 {
+        font-size: 7rem;
+    }
+}
+
+.btn-nav {
+    font-size: 2rem;
+    padding: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: transform 0.3s;
+    color: white;
+}
+
+.btn-nav.active {
+    border-bottom: 2px solid white;
+}
+
+.btn-nav:hover {
+    transform: translateY(-10%);
+}
+
+.main {
+    padding: 4rem;
+    margin: 6rem auto;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    max-width: 700px;
+}
+
+.home-container,
+.menu-container,
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: fadeIn 1.5s;
+}
+
+.home-container p {
+    padding: 1rem;
+    color: white;
+}
+
+.home-container img {
+    width: 50%;
+    margin: 3rem 0;
+    opacity: 90%;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+}
+
+@media (min-width: 700px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.menu-item {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu-item img {
+    width: 60%;
+}
+
+.menu-item p {
+    font-size: 2rem;
+}
+
+.menu-item h2 {
+    font-size: 3rem;
+}
+
+.contact-container {
+    color: white;
+}
+
+.contact-container h2, p {
+    margin: 2rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+}
